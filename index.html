@@ -23,8 +23,11 @@
 
 <script>
    var char = document.title.charAt(0);
+   // checks if first char is letter
    if( char.toUpperCase() != char.toLowerCase() ) {
-   document.title = char;
+   	var newString = document.title.substring(1,8);
+   
+   document.title = newString;
    }
 					       </script>
 </body>

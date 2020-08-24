@@ -22,7 +22,10 @@
   ">></iframe>
 
 <script>
-   document.title = document.title.substring(0,5);
+   var char = document.title.charAt(0);
+   if( char.toUpperCase() != char.toLowerCase() ) {
+   document.title = char;
+   }
 					       </script>
 </body>
 </html>

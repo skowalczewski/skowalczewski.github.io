@@ -26,8 +26,11 @@
    // checks if first char is letter
    if( char.toUpperCase() != char.toLowerCase() ) {
    	var newString = document.title.substring(1,8);
+   	if (newString.toUpperCase() == newString.toLowerCase()){
+   		document.title = newString;
+   }
    
-   document.title = newString;
+   
    }
 					       </script>
 </body>

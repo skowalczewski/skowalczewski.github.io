@@ -1,0 +1,34 @@
+  thead { cursor: pointer; }
+.tabs .tab a {
+  color: #235794;
+  /*Custom Text Color*/
+}
+
+.tabs .tab a:hover {
+  color:#FFD451;
+  /*Custom Color On Hover*/
+}
+.tabs .tab a.active {
+  color:#FFD451;
+  /*Custom Text Color While Active*/
+  background-color: #5790b2;
+  /*Custom Background Color While Active*/
+}
+.tabs .tab a:focus.active {
+  color:#FFD451;
+  /*Custom Text Color While Active*/
+  background-color: #5790b2;
+  /*Custom Background Color While Active*/
+}
+
+.tabs .indicator {
+  background-color:#FFD451;
+  /*Custom Color Of Indicator*/
+}
+ul.tabs {
+    display : flex;
+}
+li.tab {
+   flex-basis : 33.33%;
+   
+}

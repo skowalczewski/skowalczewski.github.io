@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+  </head>
+  <body>
+  <?!= include("page-css.html");?>
+  <h1 style="text-align:center"> Mississauga Neighbourhood Stats </h1>
+  <h3 style="text-align:center"> February 2021 </h3>
+  <h3 style="text-align:center"> Click to Sort! </h3>
+  <div class="container-fluid">
+   <div class="row">
+     <div class="col s12">
+     
+      <ul class="tabs">
+       <li class = "tab col" ><a class="active"  href="#test1">Detached</a></li>
+       <li class = "tab col"><a href="#test2">Semi Detached</a></li>
+        <li class = "tab col"><a href="#test3">Townhouses</a></li>
+        <li class = "tab col"><a href="#test4">Condo Townhouses</a></li>
+        <li class = "tab col"><a href="#test5">Condo Apartments</a></li>
+      </ul>
+    </div>
+    <div id="test1" class="col s12">
+    
+    <table class="tableizer-table">
+<thead><tr><th>Neighbourhood</th><th>Average Sold Price</th><th># of Solds</th><th>Average Days on Market</th></tr></thead><tbody>
+ <tr><td>Airport Corporate</td><td>0</td><td>0</td><td>0</td></tr>
+ <tr><td>Applewood</td><td>1234932</td><td>12</td><td>16</td></tr>
+ <tr><td>City Centre</td><td>0</td><td>0</td><td>0</td></tr>
+ <tr><td>Clarkson</td><td>1495168</td><td>16</td><td>8</td></tr>
+ <tr><td>Cooksville</td><td>1636308</td><td>13</td><td>8</td></tr>
+ <tr><td>Creditview</td><td>1179013</td><td>12</td><td>9</td></tr>
+ <tr><td>Dixie</td><td>1400999</td><td>1</td><td>101</td></tr>
+ <tr><td>Erin Mills</td><td>1284693</td><td>28</td><td>5</td></tr>
+ <tr><td>Erindale</td><td>2052000</td><td>13</td><td>15</td></tr>
+ <tr><td>Fairview</td><td>1249886</td><td>7</td><td>8</td></tr>
+ <tr><td>Gateway</td><td>0</td><td>0</td><td>0</td></tr>
+ <tr><td>Hurontario</td><td>1370751</td><td>25</td><td>10</td></tr>
+ <tr><td>Lakeview</td><td>1562806</td><td>31</td><td>14</td></tr>
+ <tr><td>Malton</td><td>1047625</td><td>16</td><td>7</td></tr>
+ <tr><td>Mavis-Erindale</td><td>0</td><td>0</td><td>0</td></tr>
+ <tr><td>Meadowvale Business Park</td><td>0</td><td>0</td><td>0</td></tr>
+ <tr><td>Meadowvale Village</td><td>1616511</td><td>19</td><td>7</td></tr>
+ <tr><td>Mississauga Valleys</td><td>1240000</td><td>4</td><td>7</td></tr>
+</tbody>
+      </table>
+      <p></p>
+      <div class = "input-field col s2">
+     <input type="text" id="myInput" onkeyup="filterPA()" placeholder="Enter Value">
+     <label for="myInput" class>Minimum PA: </label>
+     </div>
+    
+    
+    </div>
+    <div id="test2" class="col s12">
+      <table class = "highlight centered">
+          <thead id = "head">
+            <tr>
+                <?!=list[2]?>
+                
+            </tr>
+          </thead>
+
+          <tbody id = "2020">
+          
+              <?!=list[3]?>
+          
+          
+          </tbody>
+      </table>
+     </div>
+    <div id="test3" class="col s12">
+    
+    <table class = "highlight centered">
+          <thead>
+            <tr>
+                <?!=list[4]?>
+                
+            </tr>
+          </thead>
+
+          <tbody id = "2019">
+          
+              <?!=list[5]?>
+          
+          
+          </tbody>
+      </table>
+    
+    
+    </div>
+    <div id="test4" class="col s12">
+    <table class = "highlight centered">
+          <thead>
+            <tr>
+                <?!=list[6]?>
+                
+            </tr>
+          </thead>
+
+          <tbody id = "2018">
+          
+              <?!=list[7]?>
+          
+          
+          </tbody>
+      </table>
+      </div>
+      <div id="test5" class="col s12">
+    <table class = "highlight centered">
+          <thead>
+            <tr>
+                <?!=list[8]?>
+                
+            </tr>
+          </thead>
+
+          <tbody id = "2017">
+          
+              <?!=list[9]?>
+          
+          
+          </tbody>
+      </table>
+      </div>
+      <div id="test6" class="col s12">
+      <table class = "highlight centered">
+          <thead>
+            <tr>
+                <?!=list[10]?>
+                
+            </tr>
+          </thead>
+
+          <tbody id = "2016">
+          
+              <?!=list[11]?>
+          
+          
+          </tbody>
+      </table>
+      </div>
+      <div id="test7" class="col s12">
+      <table class = "highlight centered">
+          <thead>
+            <tr>
+                <?!=list[12]?>
+                
+            </tr>
+          </thead>
+
+          <tbody id = "2015">
+          
+              <?!=list[13]?>
+          
+          
+          </tbody>
+      </table>
+      </div>
+      <div id="test8" class="col s12">
+      <table class = "highlight centered">
+          <thead>
+            <tr>
+                <?!=list[14]?>
+                
+            </tr>
+          </thead>
+
+          <tbody id = "2014">
+          
+              <?!=list[15]?>
+          
+          
+          </tbody>
+      </table>
+      </div>
+      <div id="test9" class="col s12">
+      <table class = "highlight centered">
+          <thead>
+            <tr>
+                <?!=list[16]?>
+                
+            </tr>
+          </thead>
+
+          <tbody id = "2013">
+          
+              <?!=list[17]?>
+          
+          
+          </tbody>
+      </table>
+      </div>
+      <div id="test10" class="col s12">
+      <table class = "highlight centered">
+          <thead>
+            <tr>
+                <?!=list[18]?>
+                
+            </tr>
+          </thead>
+
+          <tbody id = "2012">
+          
+              <?!=list[19]?>
+          
+          
+          </tbody>
+      </table>
+      </div>
+      <div id="test11" class="col s12">
+      <table class = "highlight centered">
+          <thead>
+            <tr>
+                <?!=list[20]?>
+                
+            </tr>
+          </thead>
+
+          <tbody id = "2011">
+          
+              <?!=list[21]?>
+          
+          
+          </tbody>
+      </table>
+      </div>
+      <div id="test12" class="col s12">
+      <table class = "highlight centered">
+          <thead>
+            <tr>
+                <?!=list[22]?>
+                
+            </tr>
+          </thead>
+
+          <tbody id = "2010">
+          
+              <?!=list[23]?>
+          
+          
+          </tbody>
+      </table>
+      </div>
+  </div>
+  <div id="test13" class="col s12">
+      <table class = "highlight centered">
+          <thead>
+            <tr>
+                <?!=list[24]?>
+                
+            </tr>
+          </thead>
+
+          <tbody id = "2009">
+          
+              <?!=list[25]?>
+          
+          
+          </tbody>
+      </table>
+      </div>
+  </div>
+  
+  
+  </div> <!-- CLOSE CONTAINER -->
+  
+    <?!= include("page-js.html");?>
+  </body>
+</html>
+
+

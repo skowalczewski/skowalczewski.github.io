@@ -2,7 +2,7 @@
 <script>
   window.addEventListener('load', function() {
 	let message = { height: 500, width: document.body.scrollWidth };	
-	console.log("Height (x): " + myHeight);
+	console.log("Height (x): " + message.height);
 	// window.top refers to parent window
 	window.top.postMessage(message, "*");
 });

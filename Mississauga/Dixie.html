@@ -1,8 +1,7 @@
 <head>
 <script>
   window.addEventListener('load', function() {
-	var myHeight = Math.max( body.scrollHeight, body.offsetHeight);
-	let message = { height: myHeight, width: document.body.scrollWidth };	
+	let message = { height: 500, width: document.body.scrollWidth };	
 	console.log("Height (x): " + myHeight);
 	// window.top refers to parent window
 	window.top.postMessage(message, "*");

@@ -40,7 +40,7 @@
 </div>
 </div>
 
-<div w3-include-html="Mississauga/Central+Erin+Mills.html"></div>
+<div id="test" w3-include-html="testtest"></div>
 <!-- <div class="contentBlock myBlock" id="wBlock_21611570679"><iframe id="iframe-21611570679" src="https://skowalczewski.github.io/loading2.html" scrolling="no" data-gtm-yt-inspected-1_25="true"></iframe></div> -->
 
 
@@ -89,7 +89,7 @@ function changecat(value) {
       catOptions += "<option>" + mealsByCategory[value][categoryId] + "</option>";
       console.log(mealsByCategory[value][categoryId]);
     }
-    document.getElementById("neighbourhood").innerHTML = catOptions;
+   
   }
 }
     
@@ -121,8 +121,9 @@ function selection(){
   for(var i = 0; i<blocks.length;i++){
     blocks[i].innerHTML=blocks[i].innerHTML.replace("loading2.html",community);
   }
+	 document.getElementById("test").setAttribute("w3-include-html", "community"); 
 	includeHTML();
-
+	
 }
 	
 	function includeHTML() {

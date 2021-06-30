@@ -6,8 +6,6 @@
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-<h1> TEST </h1>
-
 <div class="row">
   <div class = "column" >
   
@@ -22,13 +20,13 @@
    </div>
   <div class = "column">
    <label for="neighbourhood">Choose a Neighbourhood:</label>
-  <select name="neighbourhood" id="neighbourhood">
+  <select name="neighbourhood" id="neighbourhood" onChange ="selection()">
     <option value="" disabled selected>Neighbourhood</option>
   </select>
   </div>
   <div class = "column">
   <label for="type">Choose a Property Type:</label>
-  <select name="type" id="type" onChange ="selection()">
+  <select name="type" id="type" >
     <option value="" disabled selected>Property Type</option>
     <option value="Detached">Detached</option>
     <option value="Semi Detached">Semi Detached</option>
@@ -128,7 +126,7 @@ function selection(){
 	 document.getElementById("test").setAttribute("w3-include-html", community); 
 	includeHTML();
 	changeSize();
-	
+	window.parent.location.href = window.parent.location.href;
 }
 	
 	function includeHTML() {

@@ -110,11 +110,11 @@ function selection(){
 	var city = c.options[c.selectedIndex].text;
   var n = document.getElementById("neighbourhood");
 	var neigh = n.options[n.selectedIndex].text;
-  var t = document.getElementById("type");
-	var type = t.options[t.selectedIndex].text;
+  //var t = document.getElementById("type");
+	//var type = t.options[t.selectedIndex].text;
 	console.log("City: " + city);
   console.log("Neighbourhood: " + neigh);
-  console.log("Type: " + type);
+  //console.log("Type: " + type);
   
   var community = city + '/' + neigh + ".html";
   community = community.replace(/ /g, '+');

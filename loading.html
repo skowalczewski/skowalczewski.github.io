@@ -1,1 +1,124 @@
-<h1> LOADING... </h1>
+
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<div class="row">
+  <div class = "column" >
+  
+ <label for="city">Choose a City:</label>
+  <select name="city" id="city" onChange="changecat(this.value);">
+    <option value="" disabled selected>City</option>
+    <option value="Burlington">Burlington</option>
+    <option value="Milton">Milton</option>
+    <option value="Mississauga">Mississauga</option>
+    <option value="Oakville">Oakville</option>
+  </select>
+   </div>
+  <div class = "column">
+   <label for="neighbourhood">Choose a Neighbourhood:</label>
+  <select name="neighbourhood" id="neighbourhood" onChange ="selection()">
+    <option value="" disabled selected>Neighbourhood</option>
+  </select>
+  </div>
+  <div class = "column">
+  <label for="type">Choose a Property Type:</label>
+  <select name="type" id="type" onChange ="selection()">
+    <option value="" disabled selected>Property Type</option>
+    <option value="Detached">Detached</option>
+    <option value="Semi Detached">Semi Detached</option>
+    <option value="Townhouse">Townhouse</option>
+    <option value="Condo Townhouse">Condo Townhouse</option>
+    <option value="Condo Apartment">Condo Apartment</option>
+  </select>
+  </div>
+  
+   
+</div>
+</div>
+<div class="contentBlock myBlock" id="wBlock_21611570679"><iframe id="iframe-21611570679" src="https://skowalczewski.github.io/loading2.html" scrolling="no" data-gtm-yt-inspected-1_25="true"></iframe></div>
+
+<style>
+  
+
+.column {
+
+  float: left;
+  width: 33.33%;
+  padding: 35px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.option {
+  color: #a793b8;
+ 
+}
+
+ul.dropdown-content.select-dropdown li span {
+    color: #000;
+; /* no need for !important :) */
+}
+</style>
+<script>
+  var mealsByCategory = {
+    Burlington: ["Rural Burlington", "LOL IDK"],
+    Milton: ["I don't know", 'any milton'],
+    Mississauga: ["Central Erin Mills", "Churchill Meadows", "Lorne Park", "Sheridan"],
+    Oakville: ['Clearview', 'Bronte East']
+}
+
+function changecat(value) {
+  if (value.length == 0) document.getElementById("neighbourhood").innerHTML = "<option></option>";
+  else {
+  console.log(value);
+    var catOptions = "";
+    for (categoryId in mealsByCategory[value]) {
+      catOptions += "<option>" + mealsByCategory[value][categoryId] + "</option>";
+      console.log(mealsByCategory[value][categoryId]);
+    }
+    document.getElementById("neighbourhood").innerHTML = catOptions;
+  }
+}
+    
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, {});
+  });
+  
+document.addEventListener('change', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, {});
+  });
+  
+function selection(){
+	var c = document.getElementById("city");
+	var city = c.options[c.selectedIndex].text;
+  var n = document.getElementById("neighbourhood");
+	var neigh = n.options[n.selectedIndex].text;
+  var t = document.getElementById("type");
+	var type = t.options[t.selectedIndex].text;
+	console.log("City: " + city);
+  console.log("Neighbourhood: " + neigh);
+  console.log("Type: " + type);
+  
+  var community = city + '/' + neigh + ".html";
+  community = community.replace(/ /g, '+');
+  console.log('Community: ' + community);
+  var blocks = document.querySelectorAll('[id^="wBlock_"]')
+  for(var i = 0; i<blocks.length;i++){
+    blocks[i].innerHTML=blocks[i].innerHTML.replace("loading2.html",community);
+  }  
+
+}
+</script>
+	
+    
+          

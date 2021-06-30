@@ -11,7 +11,7 @@
   
  <label for="city">Choose a City:</label>
   <select name="city" id="city" onChange="changecat(this.value);">
-    <option value="" disabled selected>City</option>
+    <option value="" disabled selected>Mississauga</option>
     <option value="Burlington">Burlington</option>
     <option value="Milton">Milton</option>
     <option value="Mississauga">Mississauga</option>
@@ -21,7 +21,7 @@
   <div class = "column">
    <label for="neighbourhood">Choose a Neighbourhood:</label>
   <select name="neighbourhood" id="neighbourhood">
-    <option value="" disabled selected>Neighbourhood</option>
+    <option value="" disabled selected>Central Erin Mills</option>
   </select>
   </div>
   <div class = "column">
@@ -72,6 +72,7 @@ ul.dropdown-content.select-dropdown li span {
 ; /* no need for !important :) */
 }
 </style>
+
 <script>
   var mealsByCategory = {
     Burlington: ["Rural Burlington", "LOL IDK"],
@@ -171,7 +172,8 @@ function changeSize(){
                                                 window.top.postMessage(message, "*");
                                                 });
 }
+selection();
 </script>
-	
+
     
           

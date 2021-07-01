@@ -166,20 +166,16 @@ function changeSize(){
 						console.log('Working?');
 						console.log(message);
 							
-                                                	window.addEventListener('change', function() {
-
-                                                console.log("Height (x): " + message.height);
-                                                window.top.postMessage(message, "*");
-                                                });
-	window.removeEventListener('change', function() {
-
-                                                console.log("Height (x): " + message.height);
-                                                window.top.postMessage(message, "*");
-                                                });
+                                                	
+	
                                              
 }
 	
+window.addEventListener('change', function() {
 
+                                                console.log("Height (x): " + message.height);
+                                                window.top.postMessage(message, "*");
+                                                });
 </script>
 
     

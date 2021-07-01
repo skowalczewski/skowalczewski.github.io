@@ -103,7 +103,7 @@ function changecat(value) {
 document.addEventListener('change', function() {
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems, {});
-	if (message){
+	if (message != null){
 	console.log("Height (x): " + message.height);
                                                 window.top.postMessage(message, "*");
                                                
